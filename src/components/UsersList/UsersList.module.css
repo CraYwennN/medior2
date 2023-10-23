@@ -1,0 +1,61 @@
+.maintitle{
+  @apply ml-10 text-xxl mt-5
+}
+
+.title {
+  @apply text-xl text-black;
+  @apply my-4 mx-0 p-0
+}
+
+.key {
+  @apply text-xl text-gray-light-2;
+  @apply my-4 mx-0 p-0
+}
+
+.paragraph {
+  @apply text-base text-gray;
+  @apply m-0 mb-2 p-0
+}
+
+.list {
+  @apply flex flex-wrap justify-center w-screen 
+}
+
+.box{
+  @apply flex flex-col  my-6 mx-3 w-[calc(33%-4rem)] border-solid border-gray-light-1 border-x border-b rounded-xxl hover:border-x-2
+}
+
+
+.button {
+  @apply text-blue text-lg mt-7 mb-2 mr-7
+}
+
+.spacer{
+  @apply ml-7
+}
+
+.head{
+  @apply text-xl mt-7 mb-2
+}
+
+.username{
+  @apply mb-5
+}
+
+.label {
+ @apply inline-block mr-24 w-3
+}
+
+.value{
+  @apply inline-block
+}
+
+.showAdress{
+  @apply flex justify-between align-middle
+}
+
+.articleButton{
+  @apply flex justify-center items-center text-lg text-blue border-solid border-blue border-2 rounded-md mr-8 ml-1 my-5 h-12
+}
+
+

@@ -3,10 +3,9 @@
 .page-layout {
   width: 100%;
   max-width: $layout-width-tablet;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $layout-padding;
-  padding-right: $layout-padding;
+ 
+  
+  
 
   @screen desktop {
     max-width: $layout-width-desktop;

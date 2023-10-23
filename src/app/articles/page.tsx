@@ -1,11 +1,8 @@
-//Homepage
 import { ReactElement } from 'react';
-import { Home } from '@/components';
 
 const Page = (): ReactElement => (
   <>
-  <Home/>
-  </>
+  Should show all Articles here
+</>
 );
-
 export default Page;

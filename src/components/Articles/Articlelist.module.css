@@ -1,0 +1,31 @@
+.body{
+  @apply w-screen
+}
+
+.list{
+  @apply flex flex-wrap justify-center items-center
+}
+
+.header{
+  @apply ml-10
+}
+
+.headerH{
+  @apply text-big
+}
+
+.headertext{
+  @apply text-gray
+}
+
+.article{
+  @apply w-[calc(33%-4rem)] h-72 mx-5 mt-2 mb-4 border-solid border border-gray-light-1 rounded-xxl hover:border-x-2
+}
+
+.articleheader{
+  @apply text-xxl my-8 mx-3
+}
+
+.articlebody{
+  @apply text-lg mx-3 text-gray
+}
