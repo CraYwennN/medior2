@@ -3,11 +3,14 @@
 .page-layout {
   width: 100%;
   max-width: $layout-width-tablet;
- 
-  
-  
+
+
+
 
   @screen desktop {
     max-width: $layout-width-desktop;
   }
 }
+
+/* tolik prázdných řádků
+proč je smazáno stylování stránky? */

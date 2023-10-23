@@ -1,3 +1,4 @@
+/* Díky tomu, že se nepoužívá atomika, je toto CSS dlouhé */
 .maintitle{
   @apply ml-10 text-xxl mt-5
 }
@@ -18,7 +19,7 @@
 }
 
 .list {
-  @apply flex flex-wrap justify-center w-screen 
+  @apply flex flex-wrap justify-center w-screen
 }
 
 .box{
@@ -57,5 +58,3 @@
 .articleButton{
   @apply flex justify-center items-center text-lg text-blue border-solid border-blue border-2 rounded-md mr-8 ml-1 my-5 h-12
 }
-
-

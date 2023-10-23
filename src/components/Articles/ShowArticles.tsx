@@ -15,6 +15,8 @@ const ShowArticles = ({ Articles }:ArticlesType):ReactElement => {
       <span className={style.headertext}>{Tuser.name}</span>
     </div>
   <div className={style.list}>
+    {/* Měla tady být komponenta Article, ale to by byl problém,
+    protože se špatně používají velká písmenka */}
     {Articles.map((Article) => (
       <div className={style.article} key={Article.id}>
         <h2 className={style.articleheader}>{Article.title}</h2>

@@ -2,7 +2,10 @@
 //and on click of button sets globalcontext to the specific user username
 'use client';
 import { ReactElement } from 'react';
+// dvojitý import
+// eslint-disable-next-line import/no-duplicates
 import Link  from 'next/link';
+// eslint-disable-next-line import/no-duplicates
 import Button from 'next/link';
 import { useGlobalContext } from '@/app/Context/globalContext';
 import { User, Users } from '../Types/Types';
@@ -13,7 +16,10 @@ const UserListClient = ({ users }:Users):ReactElement => {
   return (
     <div>
     <h1 className={style.maintitle}>Users</h1>
-    <div className={style.list}>
+      <div className={style.list}>
+        {/* Tady chybí komponenta user, která by v sobě měla komponenty (ty samé)
+         UserInfo namapované na jednotlivé položky kupříkladu
+         přes Object.keys a Array.prototype.map */}
       {users.map((user: User) => (
         <div className={style.box} key={user.id}>
           <div className={style.spacer}>
@@ -41,6 +47,7 @@ const UserListClient = ({ users }:Users):ReactElement => {
 
           <div className={style.showAdress}>
             <h2 className={style.head}>Address</h2>
+            {/* ten odkaz by měl mít target="_blank" */}
             <Link
             href={`https://mapy.cz/turisticka?source=coor&id=${user.address.geo.lng}%2C${user.address.geo.lat}&x=${user.address.geo.lng}&y=${user.address.geo.lat}&z=16`}
             className={style.button}

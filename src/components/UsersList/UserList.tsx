@@ -5,7 +5,7 @@ import UserListClient from './UserListClient';
 async function UserList(): Promise<React.JSX.Element> {
   try {
     const users = await getUsers();
-
+    // obdobně jaku u článků
     if (Array.isArray(users)) {
       return (
        <UserListClient users = {users}/>
@@ -26,4 +26,4 @@ async function UserList(): Promise<React.JSX.Element> {
   }
 }
 export default UserList;
-
+// nic to nerenderuje, takže *.ts

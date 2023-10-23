@@ -14,11 +14,12 @@
   @apply text-big
 }
 
-.headertext{
+.headertext{ /* .headerText { */
   @apply text-gray
 }
 
 .article{
+  /* raději nepoužívat custom elementy, protože je to zbytečně komplikované */
   @apply w-[calc(33%-4rem)] h-72 mx-5 mt-2 mb-4 border-solid border border-gray-light-1 rounded-xxl hover:border-x-2
 }
 

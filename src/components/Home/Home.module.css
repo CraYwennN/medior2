@@ -1,3 +1,4 @@
+/* stylování komponenty má bít na komponentě, nikoliv globálně */
 .page {
   @apply flex flex-wrap justify-center
 }

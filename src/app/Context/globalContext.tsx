@@ -1,9 +1,11 @@
+// toto nemá v co dělat ve složce app, tady jsou stránky, které se renderují
 'use client';
 import { Dispatch, createContext, useContext, useState } from 'react';
 
+// type TUser = { name: string; id: number };
 interface IGlobalContextState {
-  Tuser: { name: string; id: number };
-  setUser: Dispatch<React.SetStateAction<IGlobalContextState['Tuser']>>;
+  Tuser: { name: string; id: number }; // savedUser: TUser; Co je to T  v Tuser? Ta proměnná mi nedává žádný kontext
+  setUser: Dispatch<React.SetStateAction<IGlobalContextState['Tuser']>>; // tady by snad stačilo (user: TUser) => void
 }
 
 const GlobalContext = createContext<IGlobalContextState>({
@@ -11,9 +13,13 @@ const GlobalContext = createContext<IGlobalContextState>({
   setUser: () => {},
 });
 
-export const GlobalContextProvider: React.FC<{ children: React.ReactNode }> =
-({ children }: { children: React.ReactNode }) => {
-  const [Tuser, setUser] = useState<IGlobalContextState['Tuser']>({ name:'', id:0 });
+// interface IProps {
+//   children: ReactNode;
+// }
+
+export const GlobalContextProvider: React.FC<{ children: React.ReactNode }> = // 1. React.FC => FC; 2. Zbytečné => viz IProps a návratový typ
+({ children }: { children: React.ReactNode }) => { // ({ children }: IProps): ReactNode
+  const [Tuser, setUser] = useState<IGlobalContextState['Tuser']>({ name:'', id:0 });  // useState<Tuser>
 
   return (
   <GlobalContext.Provider value={{ Tuser, setUser }}>
@@ -32,3 +38,5 @@ export const useGlobalContext: () => IGlobalContextState = () => {
   return context;
 };
 
+// Rozdělil bych to do tří souborů: createContext, GlobalContextProvider, useGlobalContext
+// Název složky spíš GlobalContext, protože to je smyslem souborů ve složce
