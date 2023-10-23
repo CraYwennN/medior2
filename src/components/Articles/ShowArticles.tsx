@@ -2,7 +2,7 @@
 'use client';
 import { ReactElement } from 'react';
 import { useGlobalContext } from '@/app/Context/globalContext';
-import { Article, ArticlesType } from '../Types/Types';
+import { ArticlesType } from '../Types/Types';
 import style from './Articlelist.module.css';
 
 const ShowArticles = ({ Articles }:ArticlesType):ReactElement => {
@@ -15,10 +15,10 @@ const ShowArticles = ({ Articles }:ArticlesType):ReactElement => {
       <span className={style.headertext}>{Tuser.name}</span>
     </div>
   <div className={style.list}>
-    {Articles.map((ArticleSkeleton:Article )=> (
-      <div className={style.article} key={ArticleSkeleton.id}>
-        <h2 className={style.articleheader}>{ArticleSkeleton.title}</h2>
-        <p className={style.articlebody}>{ArticleSkeleton.body}</p>
+    {Articles.map((Article) => (
+      <div className={style.article} key={Article.id}>
+        <h2 className={style.articleheader}>{Article.title}</h2>
+        <p className={style.articlebody}>{Article.body}</p>
         </div>
     ))}
   </div>

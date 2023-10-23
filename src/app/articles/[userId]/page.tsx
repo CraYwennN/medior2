@@ -1,9 +1,14 @@
 //displays Articles on the page
 import { ReactElement } from 'react';
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
 import ArticleList from '@/components/Articles/ArticleList';
 
-const Page = ({ params }:Params):ReactElement  => {
+interface IPageProps {
+  params: {
+    userId: string;
+  };
+}
+
+const Page = ({ params }:IPageProps):ReactElement  => {
   const userId = params.userId;
   return (
     <ArticleList userId={userId}/>

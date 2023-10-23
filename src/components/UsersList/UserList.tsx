@@ -4,7 +4,7 @@ import UserListClient from './UserListClient';
 
 async function UserList(): Promise<React.JSX.Element> {
   try {
-    const { users } = await getUsers();
+    const users = await getUsers();
 
     if (Array.isArray(users)) {
       return (

@@ -3,14 +3,14 @@ import { Article, User } from '../Types/Types';
 import getUser from '../UsersList/getuser';
 import style from './Articlelist.module.css';
 
-interface IArticleFetchUserProps {
+interface IArticleFetchUser {
   Articles: Article[];
-  id: string;
+  Id:string
 }
 
-async function ArticleFetchUser({ Articles, id }: IArticleFetchUserProps):
+async function ArticleFetchUser({ Articles, Id }:IArticleFetchUser):
 Promise<React.ReactElement> {
-  const userId:User = await getUser(id);
+  const userId:User = await getUser(Id);
   return (
     <div className={style.body}>
     <div className={style.header}>
